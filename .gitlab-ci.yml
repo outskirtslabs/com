@@ -5,9 +5,10 @@ pages:
   - yarn global add parcel-bundler
   - yarn
   - yarn build
+  - mv dist public
   artifacts:
     paths:
-    - dist
+    - public
   cache:
     paths:
       - node_modules
