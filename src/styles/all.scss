@@ -1,0 +1,33 @@
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            700;
+$headings-font-weight:        $font-weight-bold;
+$font-family-sans-serif:      "Verb", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+//$font-family-sans-serif:      "Verb", monospace;
+
+@import "necessary-bootstrap";
+
+html {
+  font-size: 1rem;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.6rem;
+  }
+}
+
+@import "outskirts";
+@import "ol-font-awesome";

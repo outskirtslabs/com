@@ -1,0 +1,25 @@
+{
+  "name": "outskirtslabs.com",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "parcel --no-autoinstall src/index.html",
+    "build": "parcel build --no-autoinstall src/index.html"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.3.1",
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "jquery.easing": "^1.4.1",
+    "mustache": "^3.0.0",
+    "node-sass": "^4.9.4",
+    "page": "visionmedia/page.js#~1.6.3",
+    "parcel-bundler": "^1.9.7",
+    "parcel-plugin-modernizr": "^1.1.4",
+    "picturefill": "3.0.x",
+    "popper.js": "^1.12.9",
+    "velocity-animate": "1.2.x"
+  }
+}

@@ -1,0 +1,104 @@
+.ico {
+	background-repeat: no-repeat;
+	background-image: url(icons/icons.svg);
+}
+
+.svg-blueprint { 
+	background-position: 0 0;
+}
+
+.svg-blueprint-dims {
+	width: 100px;
+	height: 100px;
+}
+
+.svg-blueprint2 { 
+	background-position: 0 -100px;
+}
+
+.svg-blueprint2-dims {
+	width: 100px;
+	height: 100px;
+}
+
+.svg-flask { 
+	background-position: 0 -200px;
+}
+
+.svg-flask-dims {
+	width: 100px;
+	height: 100px;
+}
+
+.svg-flask2 { 
+	background-position: 0 -300px;
+}
+
+.svg-flask2-dims {
+	width: 100px;
+	height: 100px;
+}
+
+.svg-global { 
+	background-position: 0 -400px;
+}
+
+.svg-global-dims {
+	width: 100px;
+	height: 100px;
+}
+
+.svg-mobile { 
+	background-position: 0 -500px;
+}
+
+.svg-mobile-dims {
+	width: 100px;
+	height: 100px;
+}
+
+.svg-mobile2 { 
+	background-position: 0 -600px;
+}
+
+.svg-mobile2-dims {
+	width: 100px;
+	height: 100px;
+}
+
+.svg-open { 
+	background-position: 0 -700px;
+}
+
+.svg-open-dims {
+	width: 100px;
+	height: 100px;
+}
+
+.svg-privacy { 
+	background-position: 0 -800px;
+}
+
+.svg-privacy-dims {
+	width: 100px;
+	height: 100px;
+}
+
+.svg-target { 
+	background-position: 0 -900px;
+}
+
+.svg-target-dims {
+	width: 100px;
+	height: 100px;
+}
+
+.svg-tools { 
+	background-position: 0 -1000px;
+}
+
+.svg-tools-dims {
+	width: 100px;
+	height: 100px;
+}
+
