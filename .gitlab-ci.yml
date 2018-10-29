@@ -2,6 +2,7 @@ image: node:6.10.0
 
 pages:
   script:
+  - yarn global add parcel-bundler
   - yarn
   - yarn build
   artifacts:
