@@ -257,7 +257,7 @@ $(document).ready(function() {
     ]
   };
   const template = `<p>Thanks to these awesome artists!</p><ul>{{#credits}}<li>{{title}} by <a href="{{link}}">{{author}}</a></li>{{/credits}}</ul>`;
-  const content  = Mustache.to_html(template, credits);
+  const content  = Mustache.render(template, credits);
   $('#copyright').popover({
     content,
     html: true
