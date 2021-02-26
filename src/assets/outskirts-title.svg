@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -13,8 +11,8 @@
    height="180.67656"
    id="svg15867"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
-   sodipodi:docname="logo_outskirts_title4.svg">
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="outskirts-title.svg">
   <defs
      id="defs15869" />
   <sodipodi:namedview
@@ -24,9 +22,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="497.8292"
-     inkscape:cy="135.11266"
+     inkscape:zoom="5.6"
+     inkscape:cx="98.102503"
+     inkscape:cy="70.968886"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -34,11 +32,12 @@
      fit-margin-left="2"
      fit-margin-bottom="2"
      fit-margin-right="2"
-     inkscape:window-width="1600"
-     inkscape:window-height="831"
-     inkscape:window-x="-2"
-     inkscape:window-y="-3"
-     inkscape:window-maximized="1" />
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:document-rotation="0" />
   <metadata
      id="metadata15872">
     <rdf:RDF>
@@ -47,7 +46,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -131,12 +130,12 @@
        sodipodi:nodetypes="ccsscsssccsccsccssscsscc" />
     <path
        inkscape:connector-curvature="0"
-       style="fill:#b64726;fill-opacity:1"
+       style="fill:#e74f1f;fill-opacity:1"
        d="m -55.01147,497.8712 c -3.29232,-1.24975 -5.03031,-3.95043 -5.03031,-7.81667 0,-4.90068 3.21807,-8.1016 8.10507,-8.0619 3.76104,0.0306 5.86662,1.23467 7.54212,4.31312 0.90846,1.66912 0.98273,2.05825 0.77672,4.06908 -0.38014,3.71034 -1.566,5.69537 -4.26609,7.14108 -1.68842,0.90403 -5.21836,1.07999 -7.12751,0.35529 z"
        id="path3105-8" />
     <path
        inkscape:connector-curvature="0"
-       style="fill:#b64726;fill-opacity:1"
+       style="fill:#e74f1f;fill-opacity:1"
        d="m -48.0793,472.63865 c -2.70587,-1.42906 -3.65251,-3.86937 -2.96348,-7.63949 0.28621,-1.56611 1.89531,-3.34204 3.62335,-3.99905 1.15765,-0.44013 3.71135,-0.41674 4.93668,0.0452 4.72756,1.78237 5.35868,8.89102 1.01533,11.43638 -1.88445,1.10437 -4.69181,1.171 -6.61188,0.15694 z"
        id="path3103-0" />
     <path
