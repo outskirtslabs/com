@@ -701,7 +701,7 @@ Technologies used:
     </div>
     <div class="row no-js-hidden">
       <form id="contact-form" class="col-md-12 col-lg-6 offset-lg-3"
-            action="//outskirtslabs.us10.list-manage.com/subscribe/post?u=c4826abcc2a59d7b85945c582&amp;id=808c64c880"
+            action="https://formsubmit.co/casey@outskirtslabs.com"
             method="post" novalidate>
 
         <div class="form-group">
@@ -729,9 +729,12 @@ Technologies used:
             <input id="contact-org" name="ORG" placeholder="Your Organization's Name"
                    class="form-control requiredField label_better" type="text"
                    data-error-empty="Please enter your organization's name">
+            <input type="text" name="_honey" style="display:none">
             <i class="fa fa-group"></i>
           </div>
         </div>
+        <input type="hidden" name="_next" value="http://localhost:1234/thanks.html">
+        <!---
         <div class="checkbox">
           <label>
             <input id="contact-new-project" name="group[721][2]" value="1" checked type="checkbox">
@@ -739,6 +742,7 @@ Technologies used:
             <span class="small">Super! Click send below and I'll send you my client introduction packet. After filling out some general info, you will have the chance to schedule a free consultation.</span>
           </label>
         </div>
+        -->
         <div class="form-group">
           <label class="control-label" for="contact-message">Message</label>
           <div class="controls">
@@ -814,7 +818,7 @@ Technologies used:
           data-placement="top"
           data-trigger="focus"
           title="Credits & Attribution">
-      &copy; <strong>Casey Link</strong></a> 2009–2019 —
+      &copy; <strong>Casey Link</strong></a> 2009–2021 —
       <a id="privacy-opener" data-overlay-target="#privacy-overlay" href="/privacy">
         Privacy &amp; Datenschutzerklärung
       </a>
