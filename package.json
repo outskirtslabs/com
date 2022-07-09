@@ -15,12 +15,17 @@
     "jquery.easing": "^1.4.1",
     "less": "^4.1.1",
     "mustache": "^4.1.0",
-    "node-sass": "^5.0.0",
+    "node-sass": "^7.0.1",
     "page": "1.11.6",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-modernizr": "^1.1.4",
     "picturefill": "3.0.x",
     "popper.js": "^1.12.9",
     "velocity-animate": "1.5.x"
-  }
+  },
+  "volta": {
+    "yarn": "1.22.19",
+    "node": "16.13.0"
+  },
+  "dependencies": {}
 }
