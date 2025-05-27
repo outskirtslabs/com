@@ -1,0 +1,217 @@
+@import "tailwindcss";
+@import "./animations.css";
+
+@layer base {
+  @font-face {
+    font-family: "Verb";
+    src:
+      url("/fonts/verbregular-webfont.woff2") format("woff2"),
+      url("/fonts/verbregular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Verb";
+    src:
+      url("/fonts/verblight-webfont.woff2") format("woff2"),
+      url("/fonts/verblight-webfont.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Verb";
+    src:
+      url("/fonts/verbbold-webfont.woff2") format("woff2"),
+      url("/fonts/verbbold-webfont.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
+@theme {
+  /* Outskirts Labs brand */
+  --color-dark-liver: #524b47;
+  --color-dark-orange: #b54726;
+  --color-ol-orange: #e76227;
+  --color-turquoise: #21b899;
+  --color-ol-gray: #201e1d;
+  --color-ol-light-gray: #88837c;
+  --color-ol-brown: #3f1f10;
+  --color-gutentag: #d9564a;
+  --font-sans: "Verb", ui-sans-serif, system-ui, sans-serif;
+}
+
+#hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 7px;
+  width: 100%;
+  background: url(/assets/separator.png) repeat-x;
+}
+
+/* Services section styling */
+#services .container {
+  max-width: 1200px;
+}
+
+/* Ethics box angle styling - kept in CSS since it needs pseudo-elements */
+.ethics-box-top::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -34px;
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-right: 50px solid white;
+  transform: rotate(45deg);
+  @apply transition duration-300 ease-in-out;
+}
+
+/* Ethics box color transitions with angled borders for each section */
+#ethics[data-active="one"] [data-section="1"] .ethics-box-top,
+#ethics[data-active="one"] [data-section="1"] .ethics-box-bottom {
+  border-color: var(--color-ol-orange);
+}
+
+#ethics[data-active="one"] [data-section="1"] .ethics-box-top::before {
+  border-right-color: var(--color-ol-orange);
+}
+
+#ethics[data-active="two"] [data-section="2"] .ethics-box-top,
+#ethics[data-active="two"] [data-section="2"] .ethics-box-bottom {
+  border-color: var(--color-turquoise);
+}
+
+#ethics[data-active="two"] [data-section="2"] .ethics-box-top::before {
+  border-right-color: var(--color-turquoise);
+}
+
+#ethics[data-active="three"] [data-section="3"] .ethics-box-top,
+#ethics[data-active="three"] [data-section="3"] .ethics-box-bottom {
+  border-color: var(--color-gutentag);
+}
+
+#ethics[data-active="three"] [data-section="3"] .ethics-box-top::before {
+  border-right-color: var(--color-gutentag);
+}
+
+/* Footer separator */
+#imprint::before {
+  content: "";
+  display: block;
+  position: relative;
+  bottom: 39px;
+  height: 7px;
+  width: 100%;
+  background: url("/assets/separator.png") repeat-x;
+}
+
+/* Service icon animation */
+.service-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-icon.translate-y-\[-8px\] {
+  transform: translateY(-8px);
+}
+
+.cloak {
+  opacity: 0;
+  transition: opacity 500s ease-in;
+}
+
+/* Dialog backdrop styling */
+dialog {
+  --dialog-duration: 100ms;
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  transition:
+    translate var(--dialog-duration) ease-in-out,
+    scale var(--dialog-duration) ease-in-out,
+    filter var(--dialog-duration) ease-in-out,
+    opacity var(--dialog-duration) ease-in-out,
+    display var(--dialog-duration) ease-in-out allow-discrete;
+
+  &[open] {
+    /* Post-Entry (Normal) State */
+    translate: 0 0;
+    scale: 1;
+    filter: blur(0);
+
+    /* Pre-Entry State */
+    @starting-style {
+      translate: 0 8vh;
+      scale: 1.15;
+      filter: blur(8px);
+    }
+  }
+
+  /* Exiting State */
+  &:not([open]) {
+    translate: 0 -8vh;
+    scale: 0.8;
+    opacity: 0;
+    filter: blur(8px);
+  }
+}
+
+input,
+textarea {
+  display: inline;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.05);
+  height: 52px;
+  font-size: 18px;
+  line-height: 32px;
+  color: #aaa;
+  padding-left: 64px;
+  vertical-align: top;
+}
+
+textarea {
+  height: auto;
+  max-width: 100%;
+  min-width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  padding-top: 14px;
+  vertical-align: top;
+}
+
+.btn,
+form button {
+  position: relative;
+  box-shadow: 0 4px rgba(0, 0, 0, 0.07);
+}
+
+.btn:hover,
+form button:hover {
+  box-shadow: 0 3px rgba(0, 0, 0, 0.07);
+  top: 1px;
+  text-decoration: none;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0 !important;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

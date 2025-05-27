@@ -1,0 +1,217 @@
+/* SVG Animations */
+
+/* Blueprint Animation */
+@keyframes design-line-draw {
+  0% {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    stroke: var(--color-turquoise);
+  }
+  100% {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+    stroke: var(--color-turquoise);
+  }
+}
+
+/* Default States */
+
+/* 1. Bubbles */
+.bubble1,
+.bubble2,
+.bubble3,
+.bubble4 {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  fill: var(--color-gray);
+}
+
+/* 2. Blueprint */
+.design-line {
+  fill: none;
+  stroke: var(--color-ol-gray);
+  stroke-width: 5;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+.design-node {
+  fill: #ffffff;
+  stroke: var(--color-ol-gray);
+}
+
+/* 3. Bug List */
+.bug-check1,
+.bug-check2 {
+  opacity: 0;
+  fill: var(--color-turquoise);
+}
+
+/* Bubble Animations */
+
+/* Animation for bubble2 */
+@keyframes bubble2 {
+  0% {
+    transform: translate(0px, 0px);
+    fill: var(--color-ol-orange);
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  50% {
+    fill: var(--color-gutentag);
+  }
+  100% {
+    transform: translate(0px, -50px);
+    opacity: 0;
+  }
+}
+
+/* Animation for bubble3 */
+@keyframes bubble3 {
+  0% {
+    transform: translate(0px, 0px);
+    fill: var(--color-ol-orange);
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    fill: var(--color-gutentag);
+  }
+  100% {
+    transform: translate(0px, -50px);
+    opacity: 0;
+  }
+}
+
+/* Animation for bubble4 */
+@keyframes bubble4 {
+  0% {
+    transform: translate(0px, 0px);
+    fill: var(--color-ol-orange);
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    fill: var(--color-gutentag);
+  }
+  100% {
+    transform: translate(0px, -50px);
+    opacity: 0;
+  }
+}
+
+/* Animation for side bubble */
+@keyframes side {
+  0% {
+    transform: translateX(0px) translateY(0px);
+    fill: var(--color-ol-orange);
+  }
+  50% {
+    transform: translateX(-20px) translateY(-25px);
+    fill: var(--color-gutentag);
+  }
+  70% {
+    opacity: 1;
+  }
+  99% {
+    transform: translateX(-16px) translateY(-70px);
+    opacity: 0;
+  }
+}
+
+/* Animation States */
+
+/* 1. Flask animation state */
+.flaskAnimation .bubble2,
+.service-icon:hover .bubble2 {
+  fill: var(--color-ol-orange) !important;
+  animation: bubble2 4s linear infinite;
+}
+
+.flaskAnimation .bubble3,
+.service-icon:hover .bubble3 {
+  fill: var(--color-ol-orange) !important;
+  animation: bubble3 4s linear infinite;
+}
+
+.flaskAnimation .bubble4,
+.service-icon:hover .bubble4 {
+  fill: var(--color-ol-orange) !important;
+  animation: bubble4 4s linear infinite;
+}
+
+.flaskAnimation .bubble1,
+.service-icon:hover .bubble1 {
+  fill: var(--color-ol-orange) !important;
+  animation: side 4s linear infinite;
+}
+
+/* 2. Blueprint animation state */
+.blueprintAnimation .design-line,
+.service-icon:hover .design-line {
+  animation: design-line-draw 1.5s ease-in-out forwards;
+}
+
+.blueprintAnimation .design-node,
+.service-icon:hover .design-node {
+  stroke: var(--color-turquoise);
+  transition: stroke 1.5s ease-in-out;
+}
+
+/* 3. Mobile animation state */
+.mobileAnimation .mobile-phone,
+.service-icon:hover .mobile-phone {
+  transform: rotate(5deg);
+}
+
+.mobileAnimation .mobile-phone,
+.mobileAnimation .mobile-tablet,
+.service-icon:hover .mobile-phone,
+.service-icon:hover .mobile-tablet {
+  fill: var(--color-ol-orange) !important;
+}
+
+/* 4. Bugs animation state */
+.bugsAnimation .bug-x,
+.service-icon:hover .bug-x {
+  opacity: 0;
+}
+
+.bugsAnimation .bug-check1,
+.bugsAnimation .bug-check2,
+.service-icon:hover .bug-check1,
+.service-icon:hover .bug-check2 {
+  opacity: 1;
+}
+
+/* Transition effects for SVG elements */
+.mobile-phone {
+  transition:
+    transform 0.2s ease-out,
+    fill 0.5s ease-out;
+  transform-origin: bottom right;
+  transform: rotate(0deg);
+}
+
+.mobile-tablet,
+.bug-list-frame,
+.bug-check,
+.bug-x,
+.bug-line,
+.blueprint-design,
+.blueprint-paper {
+  transition: all 0.5s ease-out;
+}
+
+.design-node {
+  transition: stroke 0.5s ease-out;
+}
