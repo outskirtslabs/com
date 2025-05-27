@@ -19,13 +19,15 @@
     />
     <script
       type="module"
+      defer
       src="https://cdn.jsdelivr.net/gh/starfederation/datastar@v1.0.0-beta.9/bundles/datastar.js"
     ></script>
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="400" />
     <meta property="og:image:height" content="400" />
 
-    <!-- Preload fonts -->
+    <link href="/css/generated.css" rel="preload" as="style" />
+    <link href="/css/generated.css" rel="stylesheet" />
     <link
       rel="preload"
       href="/fonts/verbregular-webfont.woff2"
@@ -79,8 +81,6 @@
       href="/assets/favicon-32x32.png"
       sizes="32x32"
     />
-
-    <link href="/css/generated.css" rel="stylesheet" />
   </head>
   <body
     data-signals-ethical-stmt-open="false"

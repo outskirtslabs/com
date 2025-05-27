@@ -4,6 +4,7 @@
 @layer base {
   @font-face {
     font-family: "Verb";
+    font-display: swap;
     src:
       url("/fonts/verbregular-webfont.woff2") format("woff2"),
       url("/fonts/verbregular-webfont.woff") format("woff");
@@ -13,6 +14,7 @@
 
   @font-face {
     font-family: "Verb";
+    font-display: swap;
     src:
       url("/fonts/verblight-webfont.woff2") format("woff2"),
       url("/fonts/verblight-webfont.woff") format("woff");
@@ -22,6 +24,7 @@
 
   @font-face {
     font-family: "Verb";
+    font-display: swap;
     src:
       url("/fonts/verbbold-webfont.woff2") format("woff2"),
       url("/fonts/verbbold-webfont.woff") format("woff");
