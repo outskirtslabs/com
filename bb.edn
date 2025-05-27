@@ -1,0 +1,14 @@
+{:deps  {org.babashka/http-server {:mvn/version "0.1.13"}
+         org.babashka/cli         {:mvn/version "0.2.23"}}
+ :tasks {:requires ([babashka.tasks :refer [shell]]
+                    [babashka.cli :as cli])
+         :init     (def cli-opts (cli/parse-opts *command-line-args* {:coerce {:port :int :headers :edn}}))
+         css       {:doc  "Build Tailwind CSS"
+                    :task (shell "tailwindcss -i ./site/css/main.css -o ./site/css/generated.css")}
+         css:watch {:doc  "Watch build Tailwind CSS"
+                    :task (shell "tailwindcss -i ./site/css/main.css -o ./site/css/generated.css --watch")}
+         serve     {:doc      "Serve static assets. bb serve --port 1338"
+                    :requires ([babashka.http-server :as server])
+                    :task     (server/exec (merge {:port 1337
+                                                   :dir  "site"}
+                                                  cli-opts))}}}
