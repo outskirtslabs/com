@@ -11,4 +11,5 @@
                     :requires ([babashka.http-server :as server])
                     :task     (server/exec (merge {:port 1337
                                                    :dir  "site"}
-                                                  cli-opts))}}}
+                                                  cli-opts))}
+         deploy    (shell "rclone sync --inplace --progress --transfers 8 ./site/ outskirtslabs-com:/")}}
