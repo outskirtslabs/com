@@ -1623,6 +1623,9 @@
       </div>
     </footer>
 
+    <button id="js-open-legal" hidden aria-hidden="true" tabindex="-1" data-on-click="$imprintOpen=true"></button>
+    <button id="js-open-ethical" hidden aria-hidden="true" tabindex="-1" data-on-click="$ethicalStmtOpen=true"></button>
+
     <script>
       // Simple toggle for mobile menu
       document.addEventListener("DOMContentLoaded", () => {
@@ -1906,6 +1909,60 @@
             setupDesktopAnimations();
           }
         });
+
+
+        // Hash-based dialog management
+        (function () {
+          const legalDialog = document.querySelector('[data-ref="imprint"]');
+          const ethicalDialog = document.querySelector('[data-ref="letter"]');
+          const openLegalBtn = document.getElementById("js-open-legal");
+          const openEthicalBtn = document.getElementById("js-open-ethical");
+
+          function clearHash() {
+            history.replaceState(
+              null,
+              "",
+              window.location.pathname + window.location.search,
+            );
+          }
+
+          // Watch each dialog's open attribute and sync the URL hash
+          new MutationObserver(function () {
+            if (legalDialog.hasAttribute("open")) {
+              history.replaceState(null, "", "#legal");
+            } else if (window.location.hash === "#legal") {
+              clearHash();
+            }
+          }).observe(legalDialog, {
+            attributes: true,
+            attributeFilter: ["open"],
+          });
+
+          new MutationObserver(function () {
+            if (ethicalDialog.hasAttribute("open")) {
+              history.replaceState(null, "", "#ethical");
+            } else if (window.location.hash === "#ethical") {
+              clearHash();
+            }
+          }).observe(ethicalDialog, {
+            attributes: true,
+            attributeFilter: ["open"],
+          });
+
+          function handleHash() {
+            const hash = window.location.hash;
+            if (hash === "#legal" && openLegalBtn) {
+              openLegalBtn.click();
+            } else if (hash === "#ethical" && openEthicalBtn) {
+              openEthicalBtn.click();
+            }
+          }
+
+          window.addEventListener("hashchange", handleHash);
+
+          // Defer so Datastar has time to finish initializing
+          setTimeout(handleHash, 0);
+        })();
       });
     </script>
   </body>
