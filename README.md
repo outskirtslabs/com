@@ -2,11 +2,14 @@
 
 The landing page for https://outskirtslabs.com
 
+Note to self: this deploys to james under /var/lib/static-web/ and is auto updated
+from a server site github hook.
+
 ## License
 
 All Rights Reserved
 
-Copyright 2014 Casey Link
+Copyright (C) 2014-2026 Casey Link
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
